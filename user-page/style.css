@@ -1,0 +1,156 @@
+:root {
+    --black: #373A40;
+    --orange: #DC5F00;
+    --gray: #686D76;
+    --light: #EEEEEE;
+    --background: var(--light);
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--black);
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    font-size: 2rem;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 30px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#back-button {
+    outline: none;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    color: var(--dark);
+    transition: all .3s ease;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+@media(hover:hover) {
+    #users li:hover {
+        color: var(--orange);
+        cursor: pointer;
+    }
+    #back-button:hover {
+        background-color: var(--background);
+    }
+}
+
+
+/* /////////////////////////USER CARD STYLES///////////////////////// */
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px var(--gray);
+    overflow: hidden;
+}
+
+.user-card__image {
+    position: relative;
+    height: 200px;
+    background-color: #DC5F00;
+}
+
+.user-card__image img {
+    position: absolute;
+    bottom: -50px;
+    width: 100px;
+    left: 10px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.user-card__name {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 700;
+    bottom: 10px;
+    right: 10px;
+}
+
+.regular {
+    font-weight: 500;
+}
+
+.user-card__description {
+    padding: 55px 15px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-card__contacts_title,
+.user-card__about_title {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: var(--background);
+}
+
+.user-card__contacts_body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.phone,
+.mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone__icon svg,
+.mail__icon svg {
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+@media(hover:hover) {
+    .phone:hover,
+    .mail:hover {
+        color: var(--orange);
+    }
+}
