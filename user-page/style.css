@@ -68,7 +68,7 @@ body {
 @media (max-width:699px) {
     #users {
         column-count: 1;
-        font-size: 2rem;
+        font-size: 2remtsc;
     }
 }
 
